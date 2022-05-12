@@ -22,7 +22,7 @@
 
 header {
     position: absolute;
-    top: 5em;
+    top: 3em;
 }
 
 h1 {
@@ -96,7 +96,7 @@ p {
     border-radius: 1em;
     pointer-events: none;
     position: absolute;
-    top: 25vh;
+    top: 15em;
     display: grid;
     justify-items: center;
     align-items: center;
@@ -107,7 +107,7 @@ p {
     opacity: 1;
     background-color: var(--third);
     color: var(--main);
-    left: 12vh;
+    left: 8em;
     pointer-events: visible;
 }
 
@@ -116,7 +116,7 @@ p {
     opacity: 1;
     background-color: var(--main);
     color: var(--contrast);
-    right: 12vh;
+    right: 8em;
     pointer-events: visible;
 }
 
