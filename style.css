@@ -1,0 +1,159 @@
+:root {
+    --main: #3B064D;
+    --second: #8105D8;
+    --third: #ED0CEF;
+    --contrast: #FE59D7;
+}
+
+header {
+    position: absolute;
+    top: 5em;
+}
+
+h1 {
+    transition: 500ms;
+    transition-property: background-color, box-shadow;
+    aspect-ratio: 3/1;
+    width: 9em;
+    color: var(--contrast);
+    background-color: var(--main);
+    border-radius: 1em;
+    box-shadow: .5em .5em 0 0 var(--second);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+h1:hover {
+    transition: 500ms;
+    width: 8.7em;
+    color: var(--main);
+    background-color: var(--contrast);
+    border: .2em solid var(--main);
+    box-shadow: -.5em -.5em 0 0 var(--third);
+}
+
+body {
+    min-height: 98vh;
+    background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    width: 10em;
+    height: 5em;
+    margin: 2.5em;
+    border: none;
+    border-radius: 1em;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+img {
+    aspect-ratio: 1/1;
+    width: 15em;
+    margin: 0;
+    border: solid;
+    border-radius: 50%;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.5em;
+    margin: 1em;
+}
+
+p {
+    font-size: 1.5em;
+    position: relative;
+    bottom: 3em;
+}
+
+.modal {
+    aspect-ratio: 9/16;
+    width: 20em;
+    opacity: 0;
+    color: transparent;
+    border-radius: 1em;
+    pointer-events: none;
+    position: absolute;
+    top: 25vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+#accepted:target {
+    transition: all 500ms;
+    opacity: 1;
+    background-color: var(--third);
+    color: var(--main);
+    left: 12vh;
+    pointer-events: visible;
+}
+
+#declined:target {
+    transition: all 500ms;
+    opacity: 1;
+    background-color: var(--main);
+    color: var(--contrast);
+    right: 12vh;
+    pointer-events: visible;
+}
+
+#accepted:target #accept{
+    transition: 250ms;
+    opacity: 0;
+}
+
+#declined:target #decline {
+    transition: 250ms;
+    opacity: 0;
+}
+
+
+#accept {
+    transition: 500ms;
+    background-color: var(--contrast);
+}
+
+#accept:hover {
+    transition: 500ms;
+    margin: 2em;
+    border: solid;
+    border-width: .5em;
+    border-color: var(--second);
+}
+
+#accept > a:link {
+    color: var(--main);
+}
+
+#accept > a:visited {
+    color: var(--second);
+}
+
+#decline {
+    transition: 500ms;
+    background-color: var(--main);
+}
+
+#decline:hover {
+    transition: 500ms;
+    margin: 2em;
+    border: solid;
+    border-width: .5em;
+    border-color: var(--third);
+}
+
+#decline > a:link {
+    color: var(--contrast);
+}
+
+#decline > a:visited {
+    color: var(--third);
+}
